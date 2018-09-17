@@ -1,0 +1,18 @@
+ Lynis – Security Auditing and Rootkit Scanner------------
+
+ #wget https://downloads.cisofy.com/lynis/lynis-2.6.6.tar.gz
+ #tar xvzf lynis-2.6.6.tar.gz
+ #mv lynis /usr/local/
+ #ln -s /usr/local/lynis/lynis /usr/local/bin/lynis
+
+ 
+Now you can perform your system scanning------------------
+	#lynis audit system
+
+To make run Lynis automatically at every night, add the following cron entry, which will run at 3am night and send reports to your email address.-------------------------
+
+
+0 3 * * * /usr/local/bin/lynis --quick 2>&1 | mail -s "Lynis Reports of My Server" vishnukumarrb.tech@gmail.com
+
+
+
